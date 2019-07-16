@@ -4,21 +4,28 @@
   text-decoration: none;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  /* max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto; */
 }
 
 /* navbar */
 
 nav {
   position: sticky;
+  width: 100%
   /* position: relative; */
   display: flex;
   justify-content: center;
   background-color: rgb(14, 120, 147);
   border-bottom: 3px solid rgb(11, 93, 120);
+  z-index: 30
 }
 
 nav .container {
-  max-width: 1000px;
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
   flex: auto;
   display: flex;
   align-items: center;
@@ -57,7 +64,7 @@ nav .container {
 .navbar_items li a {
   display: block;
   margin: 5px;
-    padding: 5px;
+  padding: 5px;
 }
 
 .navbar_items li a:hover {
@@ -65,7 +72,7 @@ nav .container {
   background-color: rgb(11, 93, 120);
 }
 
-/* Dropdown */
+/* Item Dropdown */
 
 .dropdown .dropdown_item {
   display: block;
@@ -96,12 +103,11 @@ nav .container {
 
 .dropdown .wrapper:hover .content {
   height: auto;
-  z-index: 3;
+  width: 150px;
+  border-radius: 3px;
+  /* z-index: 3; */
+  /* box-shadow: 1px 1px 10px rgba(60, 59, 59, 0.5); */
 }
-
-/* .dropdown .content:hover {
-  -webkit-transition-delay: 0s;
-} */
 
 .dropdown .content ul {
   background: rgb(11, 93, 120);
@@ -125,4 +131,72 @@ nav .container {
   text-align: left;
   height: 30px;
   padding-left: 10px;
+}
+
+
+/* Heading Image and Tags */
+
+.main_heading {
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 240px;
+}
+
+.main_heading .mountain_image {
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    overflow: hidden;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    box-shadow: 1.5px 1.5px 8px 1px rgb(161, 161, 161);
+    position: absolute;
+    top: 0px;
+    right: 125px;
+    width: 310px;
+    height: 300px;
+    z-index: 10;
+}
+
+.mountain_image img {
+    transform: scale3d(2, 2, 2);
+    width: 100%;
+    height: 100%;
+}
+
+.main_heading h1{
+    font-family: 'Passion One', serif;
+    font-size: 4em;
+    font-weight: 50;
+    letter-spacing: 3px;
+    color: rgb(233, 60, 21);
+    text-shadow: 1.5px 1.5px rgb(189, 189, 189);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    z-index: 20;
+    position: inherit;
+    margin-left: 50px;
+    height: 65px;
+}
+
+.main_heading h2 {
+  font-size: 2.1em;
+  z-index: 20;
+  position: inherit;
+  margin-left: 50px;
+  color: rgb(31, 125, 145);
+}
+
+/* Card Section */
+
+
+
+/* Ill give this a try... should of used bootstrap for responsiveness alone */
+@media only screen and (max-width: 320px) {
+
 }
